@@ -1,0 +1,63 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 10px auto;
+}
+
+#input{
+    display: block;
+    margin: 50px 0px;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px 10px;
+}
+
+#addBtn {
+    width: 300px;
+    padding: 10px 10px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 310px;
+}
+
+p {
+    cursor: text;
+}
+
+#myInput {
+    padding: 10px 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    width: 500px;
+    margin-left: 400px;
+    margin-top: -20px;
+}
+
+#copyBtn {
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+
+

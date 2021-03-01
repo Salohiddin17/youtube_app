@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin.css">
+    <title>Admin Panel</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <div class="wrapper">
+        <form id="addForm">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo" width="300">
+            </a>
+            <input type="url" placeholder="Paste video link.." id="input" required>
+            <input type="url" placeholder="Paste img link.." id="input" required>
+            <input type="text" placeholder="Write title here.." id="input" required>
+            <button type="submit" id="addBtn">Add</button>
+            <!-- <button  type="button">clear</button> -->
+        </form>
+        <input type="text" value="https://www.youtube.com/embed/65M3m_z-RbU" id="myInput">
+        <button id="copyBtn" onclick="myFunction()">Copy video link</button>
+        <br>
+        <input type="text" value="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg" id="myInput">
+        <button id="copyBtn" onclick="myFunction()" disabled>Copy img link</button>
+        <br>
+        <input type="text" value="Qiynalmaslik uchun tayyor shablon qoydim!" id="myInput">
+        <button id="copyBtn" class="cob" onclick="myFunction()" disabled>Copy text</button>
+    </div>
+    
+    <script src="js/base.js">
+        
+    </script>
+</body>
+</html>
+

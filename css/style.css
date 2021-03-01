@@ -1,0 +1,752 @@
+/* ============= Roboto fonts ============= */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Roboto-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Black.woff2') format('woff2'),
+        url('../fonts/Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Roboto-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Italic.woff2') format('woff2'),
+        url('../fonts/Roboto-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.woff2') format('woff2'),
+        url('../fonts/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-LightItalic.woff2') format('woff2'),
+        url('../fonts/Roboto-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Roboto-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Thin.woff2') format('woff2'),
+        url('../fonts/Roboto-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-ThinItalic.woff2') format('woff2'),
+        url('../fonts/Roboto-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+    /* ============= Extract from normalize.css ============= */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    user-select: none;
+}
+
+body {
+    width: 1320px;
+    margin: 0;
+    margin: 0px auto;
+    padding: 0;
+    line-height: 1;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: -14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+/* Extract end */
+
+
+        /* ============= App header start ============= */
+        
+.container {
+    position: relative;
+    width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app__header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    z-index: -1;
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 13%;
+    cursor: pointer;
+}
+
+.youtube-logo {
+    margin-right: 20px;
+}
+
+.menu {
+    width: 1.4vw;
+    /* height: 3vh; */
+    transition: all .4s ease;
+} 
+
+.menu:active {
+    background-color: #E5E5E5;
+}
+
+.search-bar {
+    width: 50%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    height: 30px;
+    width: 42.4vw;
+    font-size: 90%;
+    padding-left: 10px;
+    border: none;
+    border: 1px solid #D3D3D3;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: blue;
+}
+
+.search-btn {
+    width: 4.4vw;
+    border: none;
+    height: 30px;
+    border: 1px solid #D3D3D3;
+    border-left: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    border-color: gray;
+}
+
+.microphone-btn {
+    border: none;
+    background-color: #fff;
+    outline: none;
+    width: 2.9vw;
+    height: 6vh;
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+/* .modal-microphone {
+    position: absolute;
+    width: 400px;
+    background-color: #fff;
+} */
+
+.microphone-btn:active {
+    background-color: #E5E5E5;
+}
+
+.menu-icons {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-plus,
+.app,
+.notification {
+    border-radius: 50%;
+    padding: 8px;
+    transition: all .4s ease;
+}
+
+.video-plus:active, 
+.app:active,
+.notification:active {
+    background-color: #E5E5E5;
+}
+
+.menu-channel-icon {
+    border-radius: 50%;
+}
+
+.menu-channel-icon:active {
+    border: 1px solid yellow;
+}
+/* App header end */
+
+
+    /* ============= Start header responsive design 900, 700, 600, 400, 300 ============= */
+@media screen and (max-width: 900px) {
+    .container {
+        width: 86vw;
+    }
+    .youtube-logo {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 680px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: 300px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .search-input,
+    .menu,
+    .video-plus,
+    .app,
+    .microphone-btn {
+        display: none;
+    }
+
+    .search-bar {
+        width: 20px;
+    }
+
+    .search-btn {
+        width: 1vw;
+        transform: translateX(80px);
+        border: none;
+        background-color: #fff;
+    }
+    .youtube-logo {
+        width: 60px;
+    } 
+}
+
+@media screen and (max-width: 300px) {
+    .container {
+        width: 400px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .app__header {
+        padding: 0px;
+        
+    }
+
+    .search-input,
+    .menu,
+    .video-plus,
+    .app,
+    .microphone-btn {
+        display: none;
+    }
+
+    .search-bar {
+        width: 20px;
+    }
+
+    .search-btn {
+        width: 1vw;
+        transform: translateX(80px);
+        border: none;
+        background-color: #fff;
+    }
+
+    .search-btn:hover .youtube-logo{
+        display: none;
+    }
+
+    .youtube-logo {
+        width: 100px;
+    }
+}
+/* End header responsive design */
+
+
+
+/* ================ App main start ================ */
+
+.bg {
+    background-color: #fff;
+}
+
+/* slider section  */
+.filterDiv {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    color: #000;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+    padding: 7px 10px;
+    border: 1px solid #DCDCDC;
+    outline: none;
+    transition: all .4s ease;
+    margin-left: 15px;
+    font-size: 18;
+}
+
+.categories-section {
+    border: 1px solid #E5E5E5;
+    border-left: none;
+    border-right: none;
+    width: 1150px;
+    height: 60px;
+    padding: 10px 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: fixed;
+    top: 50px;
+    /* margin-top: 80px; */
+    transform: translateX(200px);
+    z-index: -1;
+}
+
+.active {
+    background-color: #606060;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: lightgray;
+}
+
+.arrow {
+    border: none;
+    background-color: #fff;
+    border-radius: 50%;
+    outline: none;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+.arrow:active {
+    background-color: #E5E5E5;
+}
+
+
+/* video-section  */
+.video-thumbnail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 255px;
+    margin-top: 5px;
+}
+
+.videoScreen {
+    position: absolute;
+    margin-top: 100px;
+    transform: translateX(200px);
+    background-color: #000;
+    width: 800px;
+    height: 400px;
+    z-index: 10;
+    display: none;
+}
+
+.video-section {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 200px;
+    top: 110px;
+    background-color: #F9F9F9;
+    width: 1140px;
+    padding: 20px;
+    overflow-x: hidden;
+    z-index: -1;
+}
+
+.video-metadata {
+    margin-top: 15px;
+    width: 255px;
+}
+
+.video-metadata span {
+    color: #494949;
+    /* line-height: 5px; */
+}
+
+.iframe {
+    width: 255px;
+    height: 141px;
+}
+
+.img-link {
+    width: 255px;
+    height: 141px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img-link:hover {
+    display: none;
+}
+
+.img-link-re {
+    width: 255px;
+    height: 141px;
+    position: absolute;
+    left: 0;
+}
+
+.img-link-re:hover {
+    display: none;
+}
+
+.activee {
+    background-color: #E5E5E5;
+}
+
+.video-container {
+    position: relative;
+    width: 255px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.img-fon {
+    border-radius: 50%;
+}
+
+/* Side bar section  */
+.sidebar {
+    position: fixed;
+    border-top: none;
+    border-left: none;
+    width: 220px;
+    overflow: scroll;
+    overflow-x: hidden;
+    visibility: visible;
+    transform: translateX(-20px);
+    height: 600px;
+    top: 50px;
+    display: block;
+    z-index: -1;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9;
+    display: none;
+}
+
+.sidebar:hover, .sidebar::-webkit-scrollbar-thumb {
+    display: block;
+}
+
+.settings,
+.more-tube,
+.subscription,
+.list-library,
+.list-home {
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 10px;
+    margin: 0px 0px;
+    padding: 10px 0px;
+}
+.settings li,
+.more-tube li,
+.subscription li,
+.list-library li,
+.list-home li {
+    padding: 10px 8px;
+    margin-left: -10px;
+}
+.settings li a,
+.more-tube li a,
+.subscription li a,
+.list-library li a,
+.list-home li a {
+    display: flex;
+    align-items: center;
+}
+.settings li img,
+.more-tube li img,
+.subscription li img,
+.list-library li img,
+.list-home li a img {
+    margin-left: 21px;
+}
+
+.more-tube label,
+.subscription label {
+    color: #737373;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 10px 0px;
+    padding: 5px 0px;
+    margin-left: 12px;
+}
+
+.subscription li img {
+    border-radius: 50%;
+    margin-left: 17px;
+}
+.settings li a span,
+.more-tube li a span,
+.subscription li a span,
+.list-library li a span,
+.list-home li a span {
+    margin-left: 33px;
+    font-size: 15px;
+    color: #606060;
+}
+
+.settings li:hover,
+.more-tube li:hover,
+.subscription li:hover,
+.list-library li:hover,
+.list-home li:hover {
+    background-color: #F2F2F2;
+}
+
+.settings li:active,
+.more-tube li:active,
+.subscription li:active,
+.list-library li:active,
+.list-home li:active {
+    background-color: #E5E5E5;
+}
+
+.copyright p {
+    color: gray;
+    font-weight: 400;
+    padding: 10px 8px;
+    word-spacing: 5px;
+    line-height: -3px;
+}
+
+.copy-tube {
+    color: #9A9A9A;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 10px 8px;
+    cursor:text;
+}
+
+.modal-btn {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    width: 255px;
+    height: 145px;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    color: transparent;
+    border: none;
+    background-color: transparent;
+}
+
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn {
+    background-color: #ccc;
+    color: black;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #0F1826;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    margin-left: 250px;
+    margin-top: 70px;
+}
+
+.modal-content .iframe {
+    width: 853px;
+    height: 482px;
+}
+
+/* Style the horizontal ruler */
+
+/* The Modal Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #f1f1f1;
+    transition: color .4s linear;
+}
+
+.close:hover {
+    color: #AE8F5E;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+
+    .cancelbtn,
+    .deletebtn {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

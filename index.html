@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ============= Style css ============= -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- ============= Normalize css ============= -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>YouTube</title>
+</head>
+<body>
+    
+    <!-- ============= App header start ============= -->
+    <header class="app__header container">
+        <div class="menu-bar">
+            <div class="menu" onclick="myFunctions()">
+                <img src="img/menu.svg" alt="menu-icon" />
+            </div>
+            <a href="https://youtube.com">
+                <img src="img/logo.png" alt="YouTube logo" class="youtube-logo" width="100" />
+            </a>
+        </div>
+        <form class="search-bar">
+            <input class="search-input" id="myInput"  onkeyup="myFunction()" placeholder="Search">
+            <button type="submit" class="search-btn">
+                <img src="img/magnify.svg" />
+            </button>
+            <button type="button" class="microphone-btn modal-microphone" id="voiceButton">
+                <img src="img/microphone.svg" alt="microphone.svg" />
+            </button>   
+        </form>
+        <div class="menu-icons">
+            <a href="#" class="video-plus">
+                <img src="img/video-plus.svg" alt="Upload Video" />
+            </a>
+            <a href="#" class="app">
+                <img src="img/app.svg" alt="Apps" />
+            </a>
+            <a href="#" class="notification">
+                <img src="img/notification.svg" alt="Notifications" />
+            </a>
+            <a href="admin.html" class="admin">
+                <img class="menu-channel-icon" src="img/jackie_chan.jpg" alt="Your Channel" width="40" height="40" />
+            </a>
+        </div>
+    </header> <!-- App header end  -->
+    <div class="vid-source">
+        <video id="videoElement" controls width="550" height="300" class="videoScreen">
+            <source>
+        </video>
+    </div>
+    <!-- ============= App main start ============= -->
+    <main class="app__main container">
+        <div class="sidebar">
+            <ul class="list-home">
+                <li class="select-li activee">
+                    <a href="#">
+                        <img src="img/home.svg" alt="home" width="20" height="20">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="select-li">
+                    <a href="#">
+                        <img src="img/fire.svg" alt="fire" width="20" height="20">
+                        <span>Trending</span>
+                    </a>
+                <li class="select-li">
+                    <a href="#">
+                        <img src="img/subscription.svg" alt="subscription" width="20" height="20">
+                        <span>Subscription</span>
+                    </a>
+                </li>
+                </ul>
+                <ul class="list-library">
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/library.svg" alt="library" width="20" height="20">
+                            <span>Library</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/history.svg" alt="history" width="18" height="18">
+                            <span>History</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/your-video.svg" alt="your-video" width="20" height="20">
+                            <span>Your videos</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/watch.svg" alt="Watch later" width="20" height="20">
+                            <span>Watch later</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/like.svg" alt="like" width="18" height="18">
+                            <span>Liked videos</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/top-arrow.svg" alt="like" width="18" height="18">
+                            <span>Show more</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="subscription">
+                    <label>subscription</label>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/Pavel-Durov.jpg" alt="library" width="30" height="30">
+                            <span>Pavel Durov</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/stive_rogers.png" alt="history" width="30" height="30">
+                            <span>Stive Rogers</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/albert-einstein.jpg" alt="your-video" width="30" height="30">
+                            <span>Albert Einstein</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/mark-zuckerberg-.jpg" alt="Watch later" width="30" height="30">
+                            <span>Mark Zuckerberg</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/ilon_musk.jpg" alt="like" width="30" height="30">
+                            <span>Ilon Musk</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/jeff-bezos-r.jpg" alt="like" width="30" height="30">
+                            <span>Jeff Bezos</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="more-tube">
+                    <label>more from youtube</label>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/games.svg" alt="home" width="24" height="24">
+                            <span>Gaming</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/youtube-live.svg" alt="live" width="24" height="24">
+                            <span>Live</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/cloakroom.svg" alt="cloakroom" width="24" height="24">
+                            <span>Fashion & Beauty</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/light-bulb.svg" alt="learning" width="24" height="24">
+                            <span>Learning</span>
+                        </a>
+                    </li>
+                    <li class="select-li">
+                        <a href="#">
+                            <img src="img/cup.svg" alt="sport" width="24" height="24">
+                            <span>Sports</span>
+                        </a>
+                    </li>
+                    </ul>
+                    <ul class="settings">
+                        <li class="select-li">
+                            <a href="#">
+                                <img src="img/settings.svg" alt="settings" width="24" height="24">
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li class="select-li">
+                            <a href="#">
+                                <img src="img/flag.svg" alt="repostory" width="24" height="24">
+                                <span>Report history</span>
+                            </a>
+                        <li class="select-li">
+                            <a href="#">
+                                <img src="img/question.svg" alt="question" width="24" height="24">
+                                <span>Help</span>
+                            </a>
+                        </li>
+                        <li class="select-li">
+                            <a href="#">
+                                <img src="img/warning.svg" alt="feedback" width="24" height="24">
+                                <span>Send feedback</span>
+                            </a>
+                        </li>
+                    </ul>
+                        <a href="https://developers.google.com/youtube" class="copyright">
+                            <p>About Press Copy right Contact us Creators Advertise Developers</p>
+                            <p>Terms Privacy Policy & Safety How You Tube works Test new features</p>
+                        </a>
+                        <p class="copy-tube"> © 2021 Google LLC</p>
+                    </div>
+                    
+                    <div class="main-content">
+                        <section class="categories-section" id="myBtnContainer">
+                            <button class="arrow"><</button>
+                            <button class="btn active" onclick="filterSelection('all')"> All</button>
+                            <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+                            <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+                            <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+                            <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+                            <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+                            <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+                            <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+                            <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+                            <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+                            <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+                            <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+                            <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+                            <button class="btn" onclick="filterSelection('animals')"> us</button>
+                            <button class="arrow">></button>
+                        </section>
+                        <section class="video-section" id="videoSection">
+                            <article class="video-container filterDiv cars" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">Brazil, Cape Verde, and Mozambique. A debut short story</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            
+<article class="video-container filterDiv animals" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">Portugal and its colonial and linguistic diaspora, with works</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv fruit" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">River Thames recedes, revealing a muddy shoreline. Hobbyists known</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv color" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">us struggled with the Old English poem "Beowulf"</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv cars" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">ike to hike the Pacific Crest Trail all the way from</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv animals" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">Portugal and its colonial and linguistic diaspora, with works</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv fruits" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">Brazil, Cape Verde, and Mozambique. A debut short story</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv colors" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">Portugal and its colonial and linguistic diaspora, with works</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv cars" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">Brazil, Cape Verde, and Mozambique. A debut short story</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv animals" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">Portugal and its colonial and linguistic diaspora, with works</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv fruits" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">Brazil, Cape Verde, and Mozambique. A debut short story</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv colors" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">Portugal and its colonial and linguistic diaspora, with works</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv cars" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">Brazil, Cape Verde, and Mozambique. A debut short story</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+                            <article class="video-container filterDiv animals" id="list-video">
+                                <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <button class="modal-btn" onclick="document.getElementById('id01').style.display='block'">
+                            </button>
+                            <div id="id01" class="modal">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <form class="modal-content" action="/action_page.php">
+                                    <iframe width="255" height="141" class="iframe" id="frame" src="https://www.youtube.com/embed/LTMjsgS_c9M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </form>
+                            </div>
+                                <img class="img-link" onmouseover="mouseOver()" onmouseout="mouseOut()" src="img/jackie_chan.jpg" alt="oblojka" id="images">
+                                <div class="video-details">
+                                    <div class="video-thumbnail">
+                                        <img class="img-fon" src="img/jackie_chan.jpg" alt="rasm" width="40" height="40">
+                                        <p id="title">Portugal and its colonial and linguistic diaspora, with works</p>
+                                    </div>
+                                </div>
+                                <div class="video-metadata">
+                                    <span>ABC News</span> <br>
+                                    <span>12K views</span>
+                                    •
+                                    <span>1 week ago</span>
+                                </div>
+                            </article>
+
+                        </section>
+                    </div>
+                </main> <!-- App main end  -->
+                
+                <script src="js/main.js"></script>
+            </body>
+            </html>
+            
+            
+            
+            
+            
