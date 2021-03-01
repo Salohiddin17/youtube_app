@@ -184,7 +184,6 @@ a {
 
 .menu {
     width: 1.4vw;
-    /* height: 3vh; */
     transition: all .4s ease;
 } 
 
@@ -239,12 +238,6 @@ a {
     cursor: pointer;
     transition: all .4s ease;
 }
-
-/* .modal-microphone {
-    position: absolute;
-    width: 400px;
-    background-color: #fff;
-} */
 
 .microphone-btn:active {
     background-color: #E5E5E5;
@@ -414,7 +407,6 @@ a {
     overflow-y: hidden;
     position: fixed;
     top: 50px;
-    /* margin-top: 80px; */
     transform: translateX(200px);
     z-index: -1;
 }
@@ -472,7 +464,7 @@ a {
     width: 1140px;
     padding: 20px;
     overflow-x: hidden;
-    z-index: -1;
+    z-index: -2;
 }
 
 .video-metadata {
@@ -482,7 +474,6 @@ a {
 
 .video-metadata span {
     color: #494949;
-    /* line-height: 5px; */
 }
 
 .iframe {
@@ -515,6 +506,11 @@ a {
 
 .activee {
     background-color: #E5E5E5;
+    transition: all .4s linear;
+}
+
+.select-li {
+    transition: all .4s linear;
 }
 
 .video-container {
